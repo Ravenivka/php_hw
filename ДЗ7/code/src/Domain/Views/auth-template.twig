@@ -1,0 +1,5 @@
+{% if not user_authorized %}
+    <p><a href="/user/auth/">Войти</a></p>
+{% else %}
+    <p>Добро пожаловать!</p>
+{% endif %}
