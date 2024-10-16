@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+          
+        function delUser(X){
+            var Z = setInterval(function (){
+                $.ajax({
+                    method: 'POST',
+                    url: "/user/DeleteUser/",
+                    data: { id: X }
+            }).done(function (response) {
+                return response;
+            })
+            })
+            if (Z) {
+                var A = document.getElementById(X);
+                A.parentNode.removeChild(row);
+                return alert("Пользователь удалён");
+            } else {
+                return alert ("Ошибка удаления");
+            }
+        }
+    </script>
+    
+
+
+
+</head>
+<body>
+    
+</body>
+</html>
