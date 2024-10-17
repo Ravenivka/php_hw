@@ -16,7 +16,7 @@ class UserController extends AbstractController {
 
 /*_____________________________________________________________________________________________*/
     public function actionDeleteUser (): bool{
-        $id = $_GET['id_user'];
+        $id = $_POST['X'];
         return User::deleteFromStorage($id);
     }
 
